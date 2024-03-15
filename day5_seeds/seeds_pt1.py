@@ -1,4 +1,4 @@
-input_file = 'puzzle_input.txt'
+input_file = 'test.txt'
 
 
 def build_list(list_builder, units):
@@ -63,61 +63,44 @@ def get_location(seed):
         soil = dict_soil[seed]
     except KeyError:
         soil = seed
-#    print(f'soil is {soil}')
 
     dict_fert = dict(soil_fert)
     try:
         fert = dict_fert[soil]
     except KeyError:
         fert = soil
-#    print(f'fert is {fert}')
 
     dict_water = dict(fert_water)
     try:
         water = dict_water[fert]
     except KeyError:
         water = fert
-#    print(f'water is {water}')
 
     dict_light = dict(water_light)
     try:
         light = dict_light[water]
     except KeyError:
         light = water
-#    print(f'light is {light}')
 
     dict_temp = dict(light_temp)
     try:
         temp = dict_temp[light]
     except KeyError:
         temp = light
-#    print(f'temp is {temp}')
 
     dict_humidity = dict(temp_humidity)
     try:
         humidity = dict_humidity[temp]
     except KeyError:
         humidity = temp
-#    print(f'humidity is {humidity}')
 
     dict_location = dict(humidity_location)
     try:
         loc = dict_location[humidity]
     except KeyError:
         loc = humidity
-#    print(f'loc is {loc}')
 
     return loc
-
-# try:
-#     with open(input_file, 'r') as my_file:
-#         file_info = my_file.readlines()
-# except FileNotFoundError as e:
-#     print(f'Could not find file -- {e}')
-
-# We want to pull in the "text1_text0 list
-# And loop until a blank line with data1, data0, data2
-# Build list with the values
 
 
 seed_soil = []
