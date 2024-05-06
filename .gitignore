@@ -160,6 +160,6 @@ cython_debug/
 #.idea/
 
 # Test files and initialization files
-*/test.txt
+*/*test*.txt
 */puzzle_input.txt
 */__init__.py
