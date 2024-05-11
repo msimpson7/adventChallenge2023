@@ -1,18 +1,9 @@
 input_file = 'puzzle_input.txt'
 
-'''
-Steps for success:
-* read the list of moves
-* make a dictionary of tuples for each of the nodes
-* the first element of the dictionary is the starting point
-* the last element of the dictionary is the ending point
-'''
-
 
 def traverse_map(p, m):
     map_begin = 'AAA'
     map_end = 'ZZZ'
-    print(f'map_begin is {map_begin}\nmap_end is {map_end}')
     c = 0
     j = 0
     while True:
